@@ -1,0 +1,61 @@
+import java.util.LinkedList;
+
+public class Movie {
+
+    // Write a Java program to create a class called "Movie" with attributes for title,
+    // director, actors, and reviews, and methods for adding and retrieving reviews.
+
+    String Title;
+    String Director;
+
+    // Define a LinkedList to store movie reviews, where each review is of type Reviews.
+    LinkedList<Reviews> RottenTomatoes = new LinkedList<Reviews>();
+
+    LinkedList <String> Actors = new LinkedList<String>();
+
+    // Constructor for the Movie class, initializes the movie attributes and creates an empty list of reviews.
+    Movie(String Title, String Director, LinkedList <String> Actors){
+        this.Title = Title;
+        this.Director = Director;
+
+        this.Actors = Actors; //notice the difference between how this gets done versus the linked list for reviews
+
+        // Initialize the RottenTomatoes list with an empty LinkedList of Reviews.
+        this.RottenTomatoes = new LinkedList<Reviews>(); //this is the new add the 1st.
+    }
+
+    // Method to add a review to the list of reviews for the movie.
+    void AddReview(Reviews review){
+        this.RottenTomatoes.add(review);
+    }
+
+    // Method to delete a review from the list of reviews for the movie.
+    void DeleteReview(Reviews review){
+        this.RottenTomatoes.remove(review);
+    }
+
+    // Method to retrieve the list of reviews for the movie.
+    public LinkedList<Reviews> GetReviews(){
+
+        return this.RottenTomatoes;
+
+    }
+
+    public LinkedList<String> ActorsList(){ //"Actors list" is the NAME of the method
+
+        return this.Actors;
+
+    }
+
+    void GetTitle(){
+
+        System.out.println(this.Title);
+
+    }
+   void GetDirector(){
+
+       System.out.println(this.Director);
+    }
+
+
+}
