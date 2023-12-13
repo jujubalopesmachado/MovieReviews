@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Write a Java program to create a class called "Movie" with attributes for title,
+        // director, actors, and reviews, and methods for adding and retrieving reviews.
+
+
+        Movie mov1 = new Movie("Twilight", "Hardwick" ,
+
+                new LinkedList< String >(Arrays.asList("Robert Pattinson", "Taylor Lautner")));
+
+        Reviews rev1 = new Reviews("Ju", "Awesome. I loved it.", 9.9);
+
+        mov1.AddReview(rev1);
+
+        rev1.GetReviewText();
+
+        mov1.GetDirector();
+
+        mov1.GetTitle();
+
+
+
+    }
+}
