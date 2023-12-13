@@ -1,0 +1,32 @@
+public class Reviews {
+
+    String ReviewerName;
+    String ReviewText;
+    double ReviewRating;
+
+    Reviews(String ReviewerName, String ReviewText, double ReviewRating){
+
+        this.ReviewerName = ReviewerName;
+        this.ReviewText = ReviewText;
+        this.ReviewRating = ReviewRating;
+
+    }
+
+    void GetReviewerName(){
+
+        System.out.println(ReviewerName);
+
+    }
+  void GetReviewText(){
+
+        System.out.println(ReviewText);
+
+  }
+
+
+
+
+
+
+
+}
